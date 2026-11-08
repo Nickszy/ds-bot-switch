@@ -1,0 +1,67 @@
+{
+  "name": "ds-bot-switch",
+  "version": "0.4.3",
+  "description": "A floating Bot / ADE switch for the DSH web UI (fork of dsh-bot-toggle, adapted to ds-bot 0.3.x).",
+  "license": "MIT",
+  "author": "Zheyu Shen (Nickszy)",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "assets/icon-180.png",
+    "assets/icon.svg"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "dsh-web",
+    "ds-bot",
+    "bot-mode",
+    "surface-switch",
+    "ui",
+    "ds-bot-switch"
+  ],
+  "homepage": "https://github.com/Nickszy/ds-bot-switch#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nickszy/ds-bot-switch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nickszy/ds-bot-switch/issues"
+  },
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.2.1-rc.2"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [],
+      "platform": "web"
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.1-rc.2": "compatible",
+        "0.2.1-rc.3": "compatible",
+        "0.2.1-rc.4": "compatible",
+        "0.2.2-rc.1": "compatible"
+      }
+    }
+  },
+  "scripts": {
+    "check": "node --check lib/client.js && node --check lib/index.js && node --check test/smoke.mjs",
+    "test": "node --test"
+  }
+}
