@@ -1,6 +1,6 @@
 {
   "name": "ds-bot-switch",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "A floating Bot / ADE switch for the DSH web UI (fork of dsh-bot-toggle, adapted to ds-bot 0.3.x).",
   "license": "MIT",
   "author": "Zheyu Shen (Nickszy)",
